@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import clean from "@/app/utils/censorshipDept";
 
 export default function InputField({ sendMessage }) {
   const [input, setInput] = useState("");
@@ -11,7 +12,7 @@ export default function InputField({ sendMessage }) {
 
   const handleSubmit = () => {
     if (input.trim()) {
-      sendMessage(input);
+      sendMessage(clean(input)); // Christianize the input and send
       setInput("");
     }
   };
