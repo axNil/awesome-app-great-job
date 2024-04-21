@@ -1,33 +1,16 @@
-import { Paper, Box, Typography } from "@mui/material";
+"use client";
+import { useState } from "react";
+import { Box } from "@mui/material";
 import MessageBox from "./MessageBox";
 import InputField from "./InputField";
 
 export default function Chat() {
-  const messages = [
-    { name: "Alice", text: "Hello", align: "left" },
-    { name: "Bob", text: "Hi", align: "right" },
-    { name: "Alice", text: "Whatsup", align: "left" },
-    {
-      name: "Bob",
-      text: "I think I do myself a disservice by comparing myself to Steve Jobs and Walt Disney and human beings that we've seen before. It should be more like Willy Wonka...and welcome to my chocolate factory.",
-      align: "right",
-    },
-    {
-      name: "Alice",
-      text: "Ipsum Pspkjopas ascaspm asc  asc asckpoasck ascokasc aopasc asockaosc apsok",
-      align: "left",
-    },
-    {
-      name: "Alice",
-      text: "Ipsum Pspkjopas ascaspm asc  asc asckpoasck ascokasc aopasc asockaosc apsok",
-      align: "left",
-    },
-    {
-      name: "Alice",
-      text: "Ipsum Pspkjopas ascaspm asc  asc asckpoasck ascokasc aopasc asockaosc apsok",
-      align: "left",
-    },
-  ];
+  const [messages, setMessage] = useState([]);
+
+  const addClientMessage = (text) => {
+    const message = { name: "You", text: text, align: "left" };
+    setMessage((prevMessages) => [...prevMessages, message]);
+  };
 
   return (
     <Box>
@@ -58,7 +41,7 @@ export default function Chat() {
           </Box>
         ))}
       </Box>
-      <InputField></InputField>
+      <InputField sendMessage={addClientMessage}></InputField>
     </Box>
   );
 }
