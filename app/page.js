@@ -2,6 +2,9 @@ import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Chat from "@/app/components/Chat/Chat";
 
+/**
+ * Home page of the app
+ */
 export default function Home() {
   return (
     <Box>

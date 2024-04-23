@@ -10,6 +10,9 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+/**
+ * Chat component that includes a window with messages an input field and a send button.
+ */
 export default function Chat() {
   const [messages, setMessage] = useState([]);
   const [loading, setLoading] = useState(false);

@@ -3,6 +3,9 @@ import { Box, TextField, Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import clean from "@/app/utils/censorshipDept";
 
+/**
+ * Component with a multiline text field with a "Send" button for submitting messages.
+ */
 export default function InputField({ sendMessage }) {
   const [input, setInput] = useState("");
 
