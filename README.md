@@ -1,6 +1,6 @@
 # Awesome App Great Job
 
-This awesome app provides you with the ability to engage in a conversation with a Kanye West-like chatbot. The app filters away profan
+This awesome app provides you with the ability to engage in a conversation with a Kanye West-like chatbot. The app filters bad words from user inputs but keeps the responses raw to enable the full Kanye experience.
 
 ## Getting Started
 
