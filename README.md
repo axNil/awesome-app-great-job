@@ -1,6 +1,6 @@
 # Awesome App Great Job
 
-This awesome app provides you with the ability to engage in a conversation with a Kanye West-like chatbot. 
+This awesome app provides you with the ability to engage in a conversation with a Kanye West-like chatbot. The app filters away profan
 
 ## Getting Started
 
@@ -45,11 +45,11 @@ npm start
 ### API
 * [Kanye.rest](https://kanye.rest/)
 
-### Frameworks
-* [React](https://react.dev/)
-* [Next.js](https://nextjs.org/)
-* [Material UI](https://mui.com/material-ui/)
-* [Bad words next](https://www.npmjs.com/package/bad-words-next)
+### Libraries & Framworks
+* [React](https://react.dev/): A JavaScript library for building user interfaces.
+* [Next.js](https://nextjs.org/): A React framework that enables functionality such as server-side rendering and generating static websites for React based web applications.
+* [Material UI](https://mui.com/material-ui/): A React component library.
+* [Bad words next](https://www.npmjs.com/package/bad-words-next): A JavaScript/TypeScript filter and checker for bad words aka profanity.
 
 ## Author
 Axel Nilsson
