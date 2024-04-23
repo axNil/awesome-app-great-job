@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 import MessageBox from "./MessageBox";
 import InputField from "./InputField";
@@ -7,6 +7,7 @@ import fetchMessage from "@/app/utils/kanye";
 
 export default function Chat() {
   const [messages, setMessage] = useState([]);
+  const endOfMessagesRef = useRef(null);
 
   const addClientMessage = (text) => {
     const message = { name: "You:", text: text, align: "left" };
@@ -20,6 +21,10 @@ export default function Chat() {
     setMessage((prevMessages) => [...prevMessages, message]);
   };
 
+  useEffect(() => {
+    endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
     <Box>
       <Box
@@ -32,7 +37,7 @@ export default function Chat() {
         borderRadius={1}
         mb={1}
         sx={{
-          overflowY: "auto", // Enables vertical scrolling
+          overflowY: "auto", // Enables vertical scrolling for messages
         }}
       >
         {messages.map((message, index) => (
@@ -43,11 +48,12 @@ export default function Chat() {
               message.align === "left" ? "flex-start" : "flex-end"
             }
             width="100%"
-            mb={2} // Margin bottom for spacing between messages
+            mb={2}
           >
             <MessageBox message={message}></MessageBox>
           </Box>
         ))}
+        <div ref={endOfMessagesRef} />
       </Box>
       <InputField sendMessage={addClientMessage}></InputField>
     </Box>

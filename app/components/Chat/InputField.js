@@ -25,7 +25,7 @@ export default function InputField({ sendMessage }) {
   };
 
   return (
-    <Box width={534} display="flex" flexDirection="row">
+    <Box width={500} display="flex" flexDirection="row">
       <Box flexGrow={1} marginRight={1}>
         <TextField
           id="outlined-multiline-static"

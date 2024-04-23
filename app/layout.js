@@ -1,3 +1,5 @@
+import ThemeRegistry from "./theme/ThemeRegistry";
+
 export const metadata = {
   title: "Awesome App Great Job",
   description: "Do great things with great app",
@@ -7,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeRegistry>
+        <body>
+          <main>{children}</main>
+        </body>
+      </ThemeRegistry>
     </html>
   );
 }

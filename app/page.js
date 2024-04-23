@@ -4,11 +4,13 @@ import Chat from "@/app/components/Chat/Chat";
 
 export default function Home() {
   return (
-    <main>
-      <Box>
-        <Typography>Chat with Kanye</Typography>
-        <Chat></Chat>
+    <Box>
+      <Box display="flex" flexDirection="column" alignItems="center">
+        <header>
+          <Typography variant="h3">Chat with Kanye</Typography>
+        </header>
+        <Chat />
       </Box>
-    </main>
+    </Box>
   );
 }
