@@ -43,7 +43,7 @@ npm start
 ## Built with
 
 ### API
-* https://kanye.rest/
+* [Kanye.rest](https://kanye.rest/)
 
 ### Frameworks
 * [React](https://react.dev/)
