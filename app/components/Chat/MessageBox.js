@@ -12,7 +12,7 @@ export default function MessageBox({ message }) {
         sx={{
           padding: "10px",
           wordBreak: "break-word", // Ensures long words will wrap and not overflow
-          // backgroundColor: message.align === "left" ? "#adeb9b" : "#9bcdeb",
+          backgroundColor: message.align === "left" ? "#adeb9b" : "#d3dbd4",
         }}
       >
         {message.text}
